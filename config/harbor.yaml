@@ -1,0 +1,70 @@
+# 目的地設定
+ingress:
+  protocol: https
+  domain: registry.digiwincloud.com.cn
+# 管理帳號設定
+management:
+  user:
+    name: cloud
+    password: Cloud12345
+# api 位置設定
+api:
+  root: api
+  identity:
+    login: /login
+    logout: /logout
+  projects:
+    root: /projects
+    base: /projects/%d
+    metadatas:
+      root: /projects/%d/metadatas
+      base: /projects/%d/metadatas/%s
+    logs:
+      root: /projects/%d/logs
+    members:
+      root: /projects/%d/members
+      base: /projects/%d/members/%d
+  statistics:
+    root: /statistics
+  user:
+    root: /users
+    base: /users/%d
+    current: /users/current
+    password: /users/%d/password
+    sysadmin: /users/%d/sysadmin
+  repositories:
+    root: /repositories
+    base: /repositories/%s
+    labels:
+      root: /repositories/%s/labels
+      base: /repositories/%s/labels/%d
+    tags:
+      root: /repositories/%s/%s/tags
+      base: /repositories/%s/%s/tags/%d
+      manifest:
+        root: /repositories/%s/tags/%d/manifest
+        version: /repositories/%s/tags/%d/manifest?version=%s
+    signatures: /repositories/%s/signatures
+    top:
+      root: /repositories/top
+  logs:
+    root: /logs
+  jobs:
+    root: /jobs/replication
+    base: replication
+    log:
+      root: /jobs/replication/%d/log
+      scan: /jobs/scan/%d/log
+  policies:
+    root: /policies/replication
+    base: /policies/replication/%d
+  replications:
+    root: /replications
+  targets:
+    root: /targets
+    base: /targets/%d
+    ping: /targets/ping
+    policies: /targets/%d/policies/
+  configurations:
+    root: /configurations
+    reset: /configurations/reset
