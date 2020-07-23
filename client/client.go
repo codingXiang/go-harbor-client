@@ -79,8 +79,7 @@ func newClient(config configer.CoreInterface) *Client {
 		harborClient := gorequest.New()
 		c := &Client{client: harborClient, userAgent: userAgent, config: data}
 		var (
-			ingress  = data.GetStringMapString("ingress")
-			baseURL  = ingress["protocol"] + "://" + ingress["domain"]
+			baseURL  = data.GetString("ingress.protocol") + "://" + data.GetString("ingress.domain")
 			username = data.GetString("management.user.name")
 			password = data.GetString("management.user.password")
 		)
