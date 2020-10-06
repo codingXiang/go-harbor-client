@@ -40,7 +40,7 @@ api:
       base: /repositories/%s/labels/%d
     tags:
       root: /repositories/%s/%s/tags
-      base: /repositories/%s/%s/tags/%d
+      base: /repositories/%s/%s/tags/%s
       manifest:
         root: /repositories/%s/tags/%d/manifest
         version: /repositories/%s/tags/%d/manifest?version=%s
